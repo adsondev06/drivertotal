@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Driver por Código</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ROTAS DO DIA</h1>
+        <input type="file" id="input-excel" accept=".xlsx, .xls" />
+        <input type="text" id="codigo" placeholder="Digite o código para buscar" />
+        <button onclick="buscarPorCodigo()">Buscar</button>
+
+        <div id="resultado"></div>
+        <div id="contagem-nomes"></div>
+
+        <h2>Histórico de Buscas</h2>
+        <input type="text" id="filtro" placeholder="Filtrar histórico" onkeyup="filtrarHistorico()" />
+        <ul id="lista-historico"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
